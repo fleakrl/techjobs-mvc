@@ -28,16 +28,24 @@
 
         <p>
             <label for="searchTerm">Keyword:</label>
-            <input type="text" name="searchTerm" id="searchTerm" />
+            <input type="text" name="searchTerm" id="searchTerm"/>
         </p>
 
-        <input type="submit" value="Search" />
+        <input type="submit" value="Search"/>
     </form>
 
-    <hr />
+    <hr/>
 
     <!-- TODO #2 - Loop over jobs map to display all job fields -->
-
+    //for each job display a table that shows each key value pair for the category
+    <p>
+    <table th:each="job : ${searchResults}">
+    <tr th:each="category : ${job}">
+        <td th:text="${category.key}"></td>
+        <td th:text= "${category.value}"></td>
+    </tr>
+    </table>
+    </p>
 
 
 </div>
