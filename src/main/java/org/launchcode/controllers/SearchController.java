@@ -40,7 +40,7 @@ public class SearchController {
 
         log.info("Job Data Results = {}", searchResults);
 
-        model.addAttribute("searchResults", searchResults);
+        model.addAttribute("jobs", searchResults);
         return "search";
     }
 
