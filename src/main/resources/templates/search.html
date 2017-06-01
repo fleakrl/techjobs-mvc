@@ -37,7 +37,15 @@
     <hr/>
 
     <p></p>
-    <table th:class="job-listing" th:each="job : ${searchResults}">
+    <table th:class="job-listing" th:each="item : ${column}">
+        <tr th:each="category : ${job}">
+            <td th:text="${category.key}"></td>
+            <td th:text= "${category.value}"></td>
+        </tr>
+        <p></p>
+        <p></p>
+    </table>
+    <table th:class="job-listing" th:each="job : ${jobs}">
     <tr th:each="category : ${job}">
         <td th:text="${category.key}"></td>
         <td th:text= "${category.value}"></td>
