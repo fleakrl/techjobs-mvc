@@ -46,7 +46,7 @@ public class ListController {
             ArrayList<String> items = JobData.findAll(column);
             model.addAttribute("title", "All " + columnChoices.get(column) + " Values");
             model.addAttribute("column", column);
-            model.addAttribute("jobs", items);
+            model.addAttribute("items", items);
             return "list-column";
         }
 
