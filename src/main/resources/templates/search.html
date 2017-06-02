@@ -45,15 +45,10 @@
         <p></p>
         <p></p>
     </table>
-    <table th:class="job-listing" th:each="job : ${jobs}">
-    <tr th:each="category : ${job}">
-        <td th:text="${category.key}"></td>
-        <td th:text= "${category.value}"></td>
-    </tr>
-    <p></p>
-        <p></p>
-    </table>
 
+
+    <!-- Use the fragment to display the search results -->
+    <div th:replace="fragments :: result-listings"></div>
 
 
 </div>
