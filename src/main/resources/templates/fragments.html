@@ -27,7 +27,7 @@
         </div>
     </div>
 
-    <div th:fragment="result-listings">
+    <div th:fragment="result-listings" class = "container body-content">
             <p></p>
             <table th:class="job-listing" th:each="job : ${jobs}">
                 <tr th:each="category : ${job}">
