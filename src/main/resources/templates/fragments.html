@@ -27,8 +27,7 @@
         </div>
     </div>
 
-    <div th:fragment="result-list" class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+    <div th:fragment="result-listings">
             <p></p>
             <table th:class="job-listing" th:each="job : ${jobs}">
                 <tr th:each="category : ${job}">
@@ -38,7 +37,6 @@
                 <p></p>
                 <p></p>
             </table>
-        </div>
     </div>
 
 
